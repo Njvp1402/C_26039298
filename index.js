@@ -10,4 +10,11 @@ app.get('/', (request, response) => {
 
 })
 
-app.listen (5500)
+const port = process.env.port || 3000
+
+console.log({port})
+
+app.listen (port,  function() {
+    console.log("servidor escuchando en el puerto", port)
+
+})
